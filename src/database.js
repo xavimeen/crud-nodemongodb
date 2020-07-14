@@ -8,4 +8,7 @@ mongoose.connect(MONGODB_URI, {
     useCreateIndex: true
 })
     .then( db => console.log('DB conectada'))
-    .catch( err => console.log(err));
+    .catch( err => {
+        // console.log(err);
+        console.log('MONGODB ERR:', err.message);
+    });
